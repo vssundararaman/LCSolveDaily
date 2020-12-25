@@ -49,7 +49,6 @@ public class DecodeString {
     }
 
     static String decodeString(String str) {
-
         String result = "";
         Stack<Integer> countStack = new Stack<>();
         Stack<String> stringStack = new Stack<>();
