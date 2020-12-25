@@ -37,10 +37,10 @@ public class KthSmallestElementInABST {
 
         TreeNode root = new TreeNode(30);
         root.left = new TreeNode(10);
-        root.left.right = new TreeNode(20);
+        root.left.right = new TreeNode(5);
         root.right = new TreeNode(40);
 
-        System.out.println(kthSmallestElement(root,1));
+        System.out.println(kthSmallestElement(root,2));
     }
 
     static int kthSmallestElement(TreeNode root, int k){
