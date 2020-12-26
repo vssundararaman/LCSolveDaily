@@ -30,11 +30,15 @@ public class TrappingRainWater {
 
         int[] height = {0,1,0,2,1,0,1,3,2,1,2,1};
 
-        System.out.println(trappingRainWater(height));
+       // System.out.println(trappingRainWater(height));
 
         int[] height1 = {4,2,0,3,2,5};
 
-        System.out.println(trappingRainWater(height1));
+      //  System.out.println(trappingRainWater(height1));
+
+        int[] height2 = {4,2,5};
+
+        System.out.println(trappingRainWater(height2));
     }
 
     static int trappingRainWater(int[] height){
@@ -46,6 +50,7 @@ public class TrappingRainWater {
         int left = 0, right = height.length-1, level = 0, water=0;
 
         while(left < right){
+
             int lower = height[height[left]<height[right]? left++ : right--];
 
             level = Math.max(level, lower);
