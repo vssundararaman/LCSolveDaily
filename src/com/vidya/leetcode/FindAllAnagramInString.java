@@ -47,7 +47,7 @@ public class FindAllAnagramInString {
 
         s= "abab"; p= "ab";
 
-        System.out.println(findAllAnagramInString.findAllAnagrams(s, p));
+      //  System.out.println(findAllAnagramInString.findAllAnagrams(s, p));
     }
 
     List<Integer> findAllAnagrams(String s, String p) {
@@ -62,6 +62,8 @@ public class FindAllAnagramInString {
 
         for (char ch : p.toCharArray()) {
             count++;
+            int ascii  = ch;
+            System.out.println(ch + " ascii value is " + ascii);
             charMap[ch - 'a']++;
         }
 
