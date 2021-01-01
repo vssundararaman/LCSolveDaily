@@ -4,32 +4,31 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- *
  * 323. Number of Connected Components in an Undirected Graph
- *
+ * <p>
  * Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph.
- *
+ * <p>
  * Example 1:
- *
+ * <p>
  * Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]]
- *
- *      0          3
- *      |          |
- *      1 --- 2    4
- *
+ * <p>
+ * 0          3
+ * |          |
+ * 1 --- 2    4
+ * <p>
  * Output: 2
  * Example 2:
- *
+ * <p>
  * Input: n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]]
- *
- *      0           4
- *      |           |
- *      1 --- 2 --- 3
- *
+ * <p>
+ * 0           4
+ * |           |
+ * 1 --- 2 --- 3
+ * <p>
  * Output:  1
  * Note:
  * You can assume that no duplicate edges will appear in edges. Since all edges are undirected, [0, 1] is the same as [1, 0] and thus will not appear together in edges.
- *
+ * <p>
  * Time Complexity : O(N + M*log(N)) With Path Compression
  * M is number of Edges and N is number of Nodes
  * Space complexity: O(N) where N is number of Nodes
@@ -38,9 +37,9 @@ public class UnionFindDSNumberOfConnectedComponents {
 
     public static void main(String[] args) {
         int n = 5;
-         int[][] edges = {{0, 1}, {1, 2}, {3, 4}};
+        int[][] edges = {{0, 1}, {1, 2}, {3, 4}};
 
-        System.out.println(connectedComponents(n,edges));
+        System.out.println(connectedComponents(n, edges));
     }
 
     static int connectedComponents(int n, int[][] edges) {
