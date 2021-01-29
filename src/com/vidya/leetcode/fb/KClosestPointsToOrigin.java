@@ -6,8 +6,8 @@ import java.util.PriorityQueue;
 public class KClosestPointsToOrigin {
 
     public static void main(String[] args) {
-        int[][] points = {{1, 3}, {-2, 2}};
-        int k = 1;
+        int[][] points = {{-2, 2}, {1, 3}, {-1, 1}};
+        int k = 2;
 
         System.out.println(Arrays.deepToString(kCloset(points, k)));
     }
@@ -25,7 +25,7 @@ public class KClosestPointsToOrigin {
         }
         int[][] result = new int[k][2];
 
-        if (k-- > 0) {
+        while (k-- > 0) {
             result[k] = maxHeap.remove();
         }
 
