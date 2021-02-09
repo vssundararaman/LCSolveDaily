@@ -43,6 +43,10 @@ public class AlienDictionary {
         String[] str = {"wrt","wrf","er","ett","rftt"};
 
         System.out.println(alienOrder(str));
+
+        String[] str1 = {"abc","ab"};
+        System.out.println(alienOrder(str1));
+
     }
 
     static String alienOrder(String[] words) {
