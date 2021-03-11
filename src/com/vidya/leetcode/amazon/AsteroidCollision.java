@@ -49,7 +49,10 @@ public class AsteroidCollision {
 
     public static void main(String[] args) {
         int[] asteroids = {5,10,-5};
-        System.out.println(Arrays.toString(asteroidCollision(asteroids)));
+        //System.out.println(Arrays.toString(asteroidCollision(asteroids)));
+
+        int[] asteroids1 = {-2,-1,1,2};
+        System.out.println(Arrays.toString(asteroidCollision(asteroids1)));
     }
 
     static int[] asteroidCollision(int[] asteroids) {
@@ -64,18 +67,17 @@ public class AsteroidCollision {
             }else{
                 while (true){
                     int peek = stack.peek();
-
                     if( peek < 0){
                         stack.push(asteroids[i]);
                         break;
-                    }else if(peek == asteroids[i]){
+                    }else if(peek == -asteroids[i]){
                         stack.pop();
                         break;
                     }else if( peek > -asteroids[i]){
                         break;
                     }else {
                         stack.pop();
-                        if(!stack.isEmpty()){
+                        if(stack.isEmpty()){
                             stack.push(asteroids[i]);
                             break;
                         }
