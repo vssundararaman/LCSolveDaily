@@ -17,10 +17,14 @@ public class RandomizedSet {
     public static void main(String[] args) {
         RandomizedSet randomizedSet = new RandomizedSet();
         System.out.println(randomizedSet.insert(10));
-        System.out.println(randomizedSet.remove(20));
+        System.out.println(randomizedSet.insert(30));
+        System.out.println(randomizedSet.insert(40));
+        System.out.println(randomizedSet.insert(50));
+        System.out.println(randomizedSet.insert(60));
         System.out.println(randomizedSet.insert(20));
+        System.out.println(randomizedSet.remove(30));
         System.out.println(randomizedSet.getRandom());
-        System.out.println(randomizedSet.remove(10));
+        System.out.println(randomizedSet.remove(40));
         System.out.println(randomizedSet.insert(20));
         System.out.println(randomizedSet.getRandom());
 
